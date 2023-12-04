@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy
+name: Deploy static content to Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -25,7 +25,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: https://gauravambartani1.github.io/sorting-visualizer
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -44,8 +44,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          # Upload dist repository
-          path: "./dist"
+          # Upload build repository
+          path: "./build" # Update this path if your build output directory is different
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
