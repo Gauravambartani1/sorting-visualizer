@@ -25,7 +25,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://gauravambartani1.github.io/sorting-visualizer
+      url: https://gauravambartani1.github.io/sorting-visualizer/
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
